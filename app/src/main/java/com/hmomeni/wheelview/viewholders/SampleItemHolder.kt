@@ -12,7 +12,7 @@ import com.hmomeni.wheelview.models.Person
  * Created by hamed on 9/11/17.
  */
 class SampleItemHolder(private val mContext: Context, itemView: View?) : RecyclerView.ViewHolder(itemView) {
-	private var imageView: ImageView = itemView!!.findViewById(R.id.imageView)
+	private var imageView: ImageView? = itemView?.findViewById(R.id.imageView)
 
 	fun bindView(person: Person) {
 		Glide.with(mContext).load(person.photo).into(imageView)
